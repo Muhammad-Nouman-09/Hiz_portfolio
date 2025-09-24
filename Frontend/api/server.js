@@ -6,13 +6,19 @@ import cors from "cors";
 import nodemailer from "nodemailer";
 import { createClient } from "@supabase/supabase-js";
 
+
+let  SUPABASE_URL="https://vqynkgagjatimhxixod.supabase.co"
+let  SUPABASE_SERVICE_ROLE_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZxeW55a2dhZ2phdGltaHhpeG9kIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1NzkxNDcwNiwiZXhwIjoyMDczNDkwNzA2fQ.A-ce-YsnkdBQyl5Vcs4t3jGPYTLQSuVn52NxrMWATu4"
+let SUPABASE_ANON_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZxeW55a2dhZ2phdGltaHhpeG9kIiwicm9zZSI6ImFub24iLCJpYXQiOjE3NTc5MTQ3MDYsImV4cCI6MjA3MzQ5MDcwNn0.Cbmsy00k3dgYghFRh60MObzUDK2ncs-FssgQFLKy4kk"
+let SUPABASE_TABLE="hire_requests"
+
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 // ✅ Supabase client
 const supabase = createClient(
-  process.env.SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_ROLE_KEY // keep this secret, backend only!
+  SUPABASE_URL,
+  SUPABASE_SERVICE_ROLE_KEY // keep this secret, backend only!
 );
 
 // Middleware
@@ -30,7 +36,7 @@ app.post("/api/contact", async (req, res) => {
   try {
     // 1️⃣ Save to Supabase table
     const { error: dbError } = await supabase
-      .from(process.env.SUPABASE_TABLE)
+      .from(SUPABASE_TABLE)
       .insert([{ name, email, message }]);
 
     if (dbError) {
