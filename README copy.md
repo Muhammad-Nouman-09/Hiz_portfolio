@@ -1,73 +1,75 @@
-# Welcome to your Lovable project
+# Hiz Portfolio
 
-## Project info
+This is a full-stack portfolio web application built with React (Vite, TypeScript, Tailwind CSS) for the frontend and Node.js/Express (with Supabase and Nodemailer) for backend contact form handling. The project is designed to be easily deployable on Vercel as a serverless app.
 
-**URL**: https://lovable.dev/projects/2db34137-0627-4239-8ae8-f120f30824f0
+## Features
 
-## How can I edit this code?
+- Modern, responsive portfolio UI
+- Contact form with email notifications and Supabase logging
+- Modular React components (About, Portfolio, Services, Skills, Contact, etc.)
+- Tailwind CSS for fast styling
+- API routes for backend logic (contact form)
+- Environment variable support for secrets
 
-There are several ways of editing your application.
+## Technologies Used
 
-**Use Lovable**
+- React, TypeScript, Vite
+- Tailwind CSS
+- Supabase (database)
+- Nodemailer (email)
+- Express (for local backend)
+- Vercel (for hosting)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/2db34137-0627-4239-8ae8-f120f30824f0) and start prompting.
+## Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+- Node.js & npm
+- Supabase project (for contact form logging)
+- Gmail account (for email notifications)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Local Development
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. Clone the repository:
+	```sh
+	git clone https://github.com/Muhammad-Nouman-09/Hiz_portfolio.git
+	cd Hiz_portfolio/Frontend
+	```
+2. Install dependencies:
+	```sh
+	npm install
+	```
+3. Set up environment variables:
+	- Copy `.env.example` to `.env` and fill in your Supabase and email credentials.
+4. Start the frontend and backend together:
+	```sh
+	npm run dev
+	```
+	- The frontend runs on `http://localhost:3000`.
+	- The backend API runs on `http://localhost:5000/api/contact` (proxied via Vite).
 
-Follow these steps:
+### Environment Variables
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+mail me for variables
 ```
 
-**Edit a file directly in GitHub**
+## Deployment (Vercel)
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+1. Push your code to GitHub.
+2. Import your repo on [vercel.com](https://vercel.com).
+3. Set environment variables in the Vercel dashboard (do not use `.env` for secrets).
+4. Deploy and test your live site.
 
-**Use GitHub Codespaces**
+## Folder Structure
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- `Frontend/` — React app and API routes
+  - `src/` — React components, pages, hooks, assets
+  - `api/` — Express backend (contact form)
+- `Backend/` — (legacy, not needed for Vercel)
 
-## What technologies are used for this project?
+## Contact
 
-This project is built with:
+For questions or feedback, reach out via the contact form on the site or email: your_gmail@gmail.com
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/2db34137-0627-4239-8ae8-f120f30824f0) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+---
+© Muhammad Nouman
