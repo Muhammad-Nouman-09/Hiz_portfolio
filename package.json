@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-  "dev": "concurrently \"npm run backend\" \"vite\"",
+  "dev": "vite",
   "backend": "node api/server.js",
     "build": "vite build",
     "build:dev": "vite build --mode development",
