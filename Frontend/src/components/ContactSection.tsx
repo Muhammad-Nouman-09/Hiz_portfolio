@@ -32,41 +32,42 @@ const ContactSection = () => {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
-  setIsSubmitting(true);
+    e.preventDefault();
+    setIsSubmitting(true);
 
-  try {
-  const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/contact`, {
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
+    try {
+      // Use your deployed backend URL directly
+      const response = await fetch("/api/contact", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(formData),
+});
 
-    const result = await response.json();
+      const result = await response.json();
 
-    if (response.ok) {
-      toast({
-        title: "Message Sent!",
-        description: result.message,
-      });
-      setFormData({ name: "", email: "", message: "" });
-    } else {
+      if (response.ok) {
+        toast({
+          title: "Message Sent!",
+          description: result.message,
+        });
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        toast({
+          title: "Error",
+          description: result.error || "Failed to send message.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
       toast({
         title: "Error",
-        description: result.error || "Failed to send message.",
+        description: "Something went wrong. Please try again.",
         variant: "destructive",
       });
+    } finally {
+      setIsSubmitting(false);
     }
-  } catch (error) {
-    toast({
-      title: "Error",
-      description: "Something went wrong. Please try again.",
-      variant: "destructive",
-    });
-  } finally {
-    setIsSubmitting(false);
-  }
-};
-
+  };
 
   const contactInfo = [
     {
