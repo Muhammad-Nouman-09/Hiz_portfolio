@@ -65,7 +65,7 @@ export default async function handler(req, res) {
       from: `"Nouman Portfolio" <${EMAIL_USER}>`,
       to: email,
       subject: "Thank you for reaching out",
-      text: `Hi ${name},\n\nThanks for contacting me. I'll get back to you soon!\n\n- Nouman`,
+      text: `Hi ${name},\n\nThanks for contacting me. I'll get back to you soon!\n\n- MuhammadNouman`,
     });
 
     return res.status(200).json({

@@ -1,4 +1,4 @@
-# Hiz Portfolio
+# M Nouman Portfolio
 
 This is a full-stack portfolio web application built with React (Vite, TypeScript, Tailwind CSS) for the frontend and Node.js/Express (with Supabase and Nodemailer) for backend contact form handling. The project is designed to be easily deployable on Vercel as a serverless app.
 
@@ -33,7 +33,7 @@ This is a full-stack portfolio web application built with React (Vite, TypeScrip
 1. Clone the repository:
 	```sh
 	git clone https://github.com/Muhammad-Nouman-09/Hiz_portfolio.git
-	cd Hiz_portfolio/Frontend
+	cd MNouman_portfolio/Frontend
 	```
 2. Install dependencies:
 	```sh

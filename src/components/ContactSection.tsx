@@ -78,20 +78,20 @@ const ContactSection = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "mr.hizz009@gmail.com",
-      link: "mailto:mr.hizz009@gmail.com"
+      value: "mnouman.developer@gmail.com",
+      link: "mailto:mnouman.developer@gmail.com"
     },
     {
       icon: MessageCircle,
       label: "Discord",
-      value: "Mr.Hiz",
+      value: "M Nouman",
       link: "https://discord.com/channels/@me/1406568866942812211"
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "Mr.Hiz",
-      link: "https://www.linkedin.com/in/mrhiz09/"
+      value: "M Nouman",
+      link: "https://www.linkedin.com/in/muhammad-nouman09"
     },
     {
       icon: Phone,

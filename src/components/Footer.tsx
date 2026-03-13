@@ -14,7 +14,7 @@ const Footer = () => {
     {
       icon: Mail,
       label: "Email",
-      href: "mailto:mr.hizz009@gmail.com",
+      href: "mailto:mnouman.developer@gmail.com",
       color: "hover:text-red-500"
     },
     {
@@ -26,7 +26,7 @@ const Footer = () => {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      href: "https://www.linkedin.com/in/mrhiz09/",
+      href: "https://www.linkedin.com/in/muhammad-nouman09/",
       color: "hover:text-blue-600"
     }
   ];
@@ -41,7 +41,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand Section */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-gradient">Hiz</h3>
+            <h3 className="text-2xl font-bold text-gradient">M Nouman</h3>
             <p className="text-muted-foreground leading-relaxed">
               Helping businesses grow online with creative design, smart management, 
               and powerful web solutions.
@@ -86,10 +86,12 @@ const Footer = () => {
             <h4 className="text-lg font-semibold text-foreground">Services</h4>
             <div className="space-y-2">
               {[
-                "Social Media Management",
-                "Web Development",
+                "Data Analysis",
+                "MS Office Support",
+                "Web Development(React.js & Next.js)",
                 "Graphic Design",
-                "MS Office Support"
+                "MS Excel Automation",
+                "Social Media Management"
               ].map((service) => (
                 <div key={service} className="text-muted-foreground">
                   {service}
@@ -102,7 +104,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-border/50">
           <div className="flex items-center gap-2 text-muted-foreground mb-4 md:mb-0">
-            <span>© {currentYear} Hiz. Made with</span>
+            <span>© {currentYear} M Nouman. Made with</span>
             {/* <Heart className="h-4 w-4 text-red-500 fill-current" /> */}
             <span>React.js</span>
           </div>

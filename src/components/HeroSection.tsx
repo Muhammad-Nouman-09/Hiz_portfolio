@@ -27,11 +27,11 @@ const HeroSection = () => {
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="animate-fade-in-up">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            Hi, I'm <span className="text-gradient bg-gradient-to-r from-white to-accent bg-clip-text text-transparent">Hiz</span>
+            Hi, I'm <span className="text-gradient bg-gradient-to-r from-white to-accent bg-clip-text text-transparent">M Nouman</span>
           </h1>
           
           <h2 className="text-xl md:text-2xl font-semibold mb-4 text-white/90">
-            Social Media Manager | Web Developer (React.js) | Graphic Designer | MS Office Expert
+            Data Analyst |  Web Developer(React.js & Next.js)  | Python | MS Excel Expert | Social Media Manager
           </h2>
           
           <p className="text-lg md:text-xl mb-8 text-white/80 max-w-2xl mx-auto leading-relaxed">

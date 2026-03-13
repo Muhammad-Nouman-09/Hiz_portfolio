@@ -12,35 +12,36 @@ import {
 
 const SkillsSection = () => {
   const skills = [
-    {
-      icon: Share2,
-      title: "Social Media Management",
-      description: "Content strategy, scheduling, community engagement, and analytics across all major platforms",
-      color: "from-pink-500 to-rose-500"
-    },
+   
     {
       icon: FileSpreadsheet,
       title: "MS Office Expert",
       description: "Advanced Excel formulas, PowerPoint presentations, Word documents, and data analysis",
       color: "from-blue-500 to-indigo-500"
     },
+     {
+      icon: FileSpreadsheet,
+      title: "MS Excel Expert",
+      description: "As an MS Excel Expert, I work with advanced formulas, pivot tables, data analysis, and dashboards to organize data and track business performance.",
+      color: "from-blue-500 to-indigo-500"
+    },
     {
       icon: Code,
-      title: "Web Development",
-      description: "React.js, modern JavaScript, responsive design, and progressive web applications",
+      title: "Web Development(React.js & Next.js)",
+      description: "React.js & Next.js, modern JavaScript, responsive design, and progressive web applications",
       color: "from-green-500 to-emerald-500"
+    },
+     {
+      icon: Smartphone,
+      title: "Python",
+      description: "As a Python Developer, I build scripts and tools that automate tasks, process data, and improve workflow efficiency.",
+      color: "from-teal-500 to-green-500"
     },
     {
       icon: Palette,
       title: "Graphic Design",
       description: "Brand identity, social media graphics, logos, banners, and visual storytelling",
       color: "from-purple-500 to-violet-500"
-    },
-    {
-      icon: TrendingUp,
-      title: "Digital Marketing",
-      description: "Campaign optimization, content marketing, and performance tracking",
-      color: "from-orange-500 to-red-500"
     },
     {
       icon: Database,
@@ -54,19 +55,25 @@ const SkillsSection = () => {
       description: "Responsive interfaces optimized for all devices and screen sizes",
       color: "from-teal-500 to-green-500"
     },
-    {
-      icon: PenTool,
-      title: "Creative Tools",
-      description: "Adobe Creative Suite, Figma, Canva, and modern design workflows",
-      color: "from-yellow-500 to-orange-500"
-    }
+     {
+      icon: Share2,
+      title: "Social Media Management",
+      description: "Content strategy, scheduling, community engagement, and analytics across all major platforms",
+      color: "from-pink-500 to-rose-500"
+    },
+    // {
+    //   icon: PenTool,
+    //   title: "Creative Tools",
+    //   description: "trello, Figma, Canva, and modern design workflows",
+    //   color: "from-yellow-500 to-orange-500"
+    // }
   ];
 
   return (
     <section id="skills" className="py-20 bg-background">
-      <div className="container mx-auto px-6">
+      <div className="container ">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">My Skills</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 ">My Skills</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-8 rounded-full" />
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             A comprehensive toolkit for modern digital solutions

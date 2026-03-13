@@ -5,9 +5,9 @@ import { Star, Clock, Users, Award } from "lucide-react";
 const AboutSection = () => {
   const stats = [
     { icon: Star, label: "Client Satisfaction", value: "100%" },
-    { icon: Clock, label: "Years Experience", value: "1+" },
-    { icon: Users, label: "Projects Completed", value: "25+" },
-    { icon: Award, label: "Skills Mastered", value: "4" },
+    { icon: Clock, label: "Years Experience", value: "3+" },
+    { icon: Users, label: "Projects Completed", value: "10+" },
+    { icon: Award, label: "Skills Mastered", value: "10+" },
   ];
 
   return (
@@ -22,14 +22,13 @@ const AboutSection = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I'm a versatile freelancer with <strong>1 year of professional office experience</strong> 
-                in social media management, creative design, and web development. My journey has taken me 
-                through diverse projects where I've honed my skills in creating engaging digital experiences.
+                I'm a versatile freelancer with <strong>3+ years of professional office experience </strong> 
+                 As a data analyst, I analyse business data using Excel and Python to create reports and insights that support better decision-making.
               </p>
               
               <p className="text-lg text-muted-foreground leading-relaxed">
                 What sets me apart is my <strong>client-focused approach</strong> and commitment to delivering 
-                high-quality work on time. Whether it's building a React.js application, crafting social media 
+                high-quality work on time. Whether it's building a Next.js application, crafting social media 
                 strategies, or designing compelling visuals, I bring creativity and technical expertise to every project.
               </p>
 

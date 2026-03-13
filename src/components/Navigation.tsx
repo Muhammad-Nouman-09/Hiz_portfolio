@@ -44,7 +44,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="text-2xl font-bold text-gradient cursor-pointer" onClick={() => scrollToSection("#home")}>
-            Hiz
+            M Nouman
           </div>
 
           {/* Desktop Navigation */}
