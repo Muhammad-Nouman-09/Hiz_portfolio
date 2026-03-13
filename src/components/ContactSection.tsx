@@ -23,6 +23,9 @@ const ContactSection = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+  const apiBaseUrl = import.meta.env.DEV
+    ? ""
+    : import.meta.env.VITE_API_BASE_URL?.trim() || "";
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -36,32 +39,34 @@ const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
-      // Use your deployed backend URL directly
-      const response = await fetch("/api/contact", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify(formData),
-});
+      const response = await fetch(`${apiBaseUrl}/api/contact`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
-      const result = await response.json();
+      const contentType = response.headers.get("content-type");
+      const result = contentType?.includes("application/json")
+        ? await response.json()
+        : null;
 
       if (response.ok) {
         toast({
           title: "Message Sent!",
-          description: result.message,
+          description: result?.message || "Your message was sent successfully.",
         });
         setFormData({ name: "", email: "", message: "" });
       } else {
         toast({
           title: "Error",
-          description: result.error || "Failed to send message.",
+          description: result?.error || "Failed to send message.",
           variant: "destructive",
         });
       }
     } catch (error) {
       toast({
         title: "Error",
-        description: "Something went wrong. Please try again.",
+        description: "Unable to reach the contact service. Check your API URL and try again.",
         variant: "destructive",
       });
     } finally {
