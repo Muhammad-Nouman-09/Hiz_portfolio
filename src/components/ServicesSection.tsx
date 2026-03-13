@@ -31,10 +31,11 @@ const ServicesSection = () => {
     },
     {
       icon: Code,
-      title: "Web Development",
-      description: "Modern, responsive websites and web applications built with React.js",
+      title: "Web Development (React.js & Next.js)",
+      description: "Modern, responsive websites and web applications built with React.js & Next.js",
       features: [
         "React.js development",
+        "Next.js development",
         "Responsive design",
         "Performance optimization",
         "SEO implementation",
@@ -46,12 +47,27 @@ const ServicesSection = () => {
     },
     {
       icon: Palette,
-      title: "Graphic Design",
-      description: "Eye-catching designs that communicate your brand message effectively",
+      title: "Data Analysis with Python & MS Excel",
+      description: "In-depth data analysis and visualization using Python and MS Excel",
       features: [
-        "Logo & brand identity",
-        "Social media graphics",
-        "Marketing materials",
+        "Data cleaning and preprocessing",
+        "Statistical analysis",
+        "Data visualization",
+        "Report generation",
+        "Dashboard development"
+      ],
+      price: "It will be negotiateable",
+      duration: "Per project",
+      popular: false
+    },
+    {
+      icon: FileSpreadsheet,
+      title: "MS Office & Admin Support",
+      description: "Professional administrative support and document management",
+      features: [
+        "Advanced Excel solutions",
+        "PowerPoint presentations",
+        "Data analysis & reporting",    
         "Print design",
         "Brand guidelines"
       ],
@@ -80,7 +96,7 @@ const ServicesSection = () => {
     <section id="services" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">Services</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 ">Services</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-8 rounded-full" />
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Comprehensive digital solutions tailored to your business needs

@@ -30,21 +30,31 @@ const PortfolioSection = () => {
     },
     {
       id: 3,
-      title: "Social Media Campaign",
-      description: "360-degree social media strategy and content creation that increased engagement by 300% and followers by 150%.",
+      title: "Muhammad Nouman Portfolio",
+      description: "Python Developer and Web Developer with experience in React.js and Next.js, skilled in automation, data processing, and advanced MS Office tools including Excel, Word, and PowerPoint",
       image: projectSocial,
       category: "Social Media",
-      technologies: ["Content Strategy", "Analytics", "Canva", "Hootsuite"],
-      // liveUrl: "#",
-      // githubUrl: "#"
-    }
+      technologies: ["React.js", "JavaScript", "Vite.js", "Tailwind CSS"],
+       liveUrl: "https://mnouman-portfolio.vercel.app",
+      githubUrl: "https://github.com/Muhammad-Nouman-09/Hiz_portfolio"
+    },
+    {
+      id: 4,
+      title: "Pharmaceutical Sales Data Processing Module",
+      description: "Developed an Excel based data processing module that cleans and transforms distributor invoice data, integrates customer information using advanced formulas, and generates automated reports, pivot tables, and dashboards for sales analysis.",
+      image: projectSocial,
+      category: "Social Media",
+      technologies: ["Pivot Tables", "Analytics", "Vlookup", "Modules"],
+       liveUrl: "https://drive.google.com/drive/folders/1CW8MucDZO6PceMW9T1yyQmM4e92H6-Lb?usp=sharing",
+      //githubUrl: "#"
+    },
   ];
 
   return (
     <section id="portfolio" className="py-20 bg-gradient-to-br from-secondary/30 to-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">Featured Projects</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 ">Featured Projects</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-8 rounded-full" />
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             A showcase of my recent work across different disciplines

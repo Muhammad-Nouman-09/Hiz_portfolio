@@ -105,7 +105,7 @@ const ContactSection = () => {
     <section id="contact" className="py-20 bg-gradient-to-br from-secondary/30 to-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">Let's Work Together</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 ">Let's Work Together</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-8 rounded-full" />
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Ready to bring your ideas to life? Get in touch and let's discuss your project.
