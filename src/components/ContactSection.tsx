@@ -22,9 +22,11 @@ const ContactSection = () => {
     message: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showWhatsAppButton, setShowWhatsAppButton] = useState(false);
   const { toast } = useToast();
   const configuredApiBaseUrl = import.meta.env.VITE_API_BASE_URL?.trim() || "";
   const apiBaseUrl = getApiBaseUrl(configuredApiBaseUrl);
+  const whatsappUrl = getWhatsAppUrl();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -54,8 +56,10 @@ const ContactSection = () => {
           title: "Message Sent!",
           description: result?.message || "Your message was sent successfully.",
         });
+        setShowWhatsAppButton(true);
         setFormData({ name: "", email: "", message: "" });
       } else {
+        setShowWhatsAppButton(true);
         toast({
           title: "Error",
           description: result?.error || "Failed to send message.",
@@ -63,6 +67,7 @@ const ContactSection = () => {
         });
       }
     } catch (error) {
+      setShowWhatsAppButton(true);
       toast({
         title: "Error",
         description: "Unable to reach the contact service. Check your API URL and try again.",
@@ -175,6 +180,24 @@ const ContactSection = () => {
                   </>
                 )}
               </Button>
+
+              {showWhatsAppButton && whatsappUrl ? (
+                <div className="space-y-3 rounded-md border border-[#25D366]/20 bg-[#25D366]/5 p-4">
+                  <p className="text-sm text-muted-foreground">
+                    You can also message directly on WhatsApp:{" "}
+                    <span className="font-semibold text-foreground">{formatWhatsAppNumber(whatsappUrl)}</span>
+                  </p>
+                  <a
+                    href={whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex w-full items-center justify-center rounded-md bg-[#25D366] px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                  >
+                    <MessageCircle className="mr-2 h-5 w-5" />
+                    Continue on WhatsApp
+                  </a>
+                </div>
+              ) : null}
             </form>
           </Card>
 
@@ -263,4 +286,30 @@ function getApiBaseUrl(configuredApiBaseUrl: string) {
   } catch {
     return configuredApiBaseUrl.replace(/\/+$/, "");
   }
+}
+
+function getWhatsAppUrl() {
+  const phoneNumber = (
+    import.meta.env.VITE_WHATSAPP_NUMBER?.replace(/\D/g, "") || "923098330091"
+  );
+  const defaultMessage = encodeURIComponent(
+    "Hi Nouman, I just submitted the contact form on your portfolio and wanted to follow up here on WhatsApp."
+  );
+
+  if (!phoneNumber) {
+    return "";
+  }
+
+  return `https://wa.me/${phoneNumber}?text=${defaultMessage}`;
+}
+
+function formatWhatsAppNumber(whatsappUrl: string) {
+  const match = whatsappUrl.match(/wa\.me\/(\d+)/);
+  const digits = match?.[1] || "";
+
+  if (!digits) {
+    return "";
+  }
+
+  return `+${digits}`;
 }
