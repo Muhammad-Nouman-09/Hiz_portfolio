@@ -23,9 +23,8 @@ const ContactSection = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
-  const apiBaseUrl = import.meta.env.DEV
-    ? ""
-    : import.meta.env.VITE_API_BASE_URL?.trim() || "";
+  const configuredApiBaseUrl = import.meta.env.VITE_API_BASE_URL?.trim() || "";
+  const apiBaseUrl = getApiBaseUrl(configuredApiBaseUrl);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -245,3 +244,23 @@ const ContactSection = () => {
 };
 
 export default ContactSection;
+
+function getApiBaseUrl(configuredApiBaseUrl: string) {
+  if (!configuredApiBaseUrl) {
+    return "";
+  }
+
+  try {
+    const url = new URL(configuredApiBaseUrl);
+    const isLocalHost = ["localhost", "127.0.0.1"].includes(url.hostname);
+
+    // In both local Vite dev and Vercel production, same-origin /api/contact is the safest default.
+    if (isLocalHost) {
+      return "";
+    }
+
+    return configuredApiBaseUrl.replace(/\/+$/, "");
+  } catch {
+    return configuredApiBaseUrl.replace(/\/+$/, "");
+  }
+}
